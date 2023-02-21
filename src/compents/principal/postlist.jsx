@@ -21,7 +21,7 @@ const PostList = () => {
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [appId]);
 
   const handleCommentClick = (post) => {
     setSelectedPost(post);
