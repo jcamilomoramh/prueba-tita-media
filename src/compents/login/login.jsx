@@ -6,6 +6,7 @@ import '../styles/login.css'
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
 
+  
   return (
     <div className="contenedor">
       <div className="text-content">
