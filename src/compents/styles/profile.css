@@ -1,0 +1,33 @@
+.profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent;
+    color: #000000;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .profile-header h2 {
+    margin: 20px;
+    left: 40%;
+    position: absolute;
+  }
+  
+  .profile-header-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin: 20px;
+  }
+  
+  .profile-header-email {
+    margin: 0;
+    font-size: 14px;
+  }
+  .profile-header-info{
+        margin-left: -100px;
+  }

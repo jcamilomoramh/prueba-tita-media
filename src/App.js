@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Auth0Provider, useAuth0 } from '@auth0/auth0-react';
+import LoginButton from './compents/login/login';
+import Profile from './compents/login/profile';
 
 function App() {
+  const { isAuthenticated } = useAuth0();
+  const [isLoggedIn, setIsLoggedIn] = useState(isAuthenticated);
+
+  const onLogin = () => setIsLoggedIn(true);
+  const onLogout = () => setIsLoggedIn(false);
+  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
+  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      authorizationParams={{
+        redirect_uri: window.location.origin
+      }}
+      onRedirectCallback={onLogin}
+    >
+      {isLoggedIn ? <Profile onLogout={onLogout} /> : <LoginButton />}
+    </Auth0Provider>
   );
 }
 
