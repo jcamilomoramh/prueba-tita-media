@@ -39,7 +39,7 @@ It is important to note that the project uses Auth0 for the permission and acces
 
 Then, make the changes you want to make and submit a pull request. Be sure to provide a clear description of the changes you made and why you made them.
 
-### ¡THANKS TITA MEDIA!
+## ¡THANKS TITA MEDIA!
 
 ¡Thank you for giving me the opportunity to work on this Tita Media test project! I hope I have met the expectations and created a good README for the repository. I am excited about the possibility of joining the Tita Media team and continuing to learn and grow as a developer.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
